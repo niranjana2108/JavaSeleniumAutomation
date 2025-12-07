@@ -10,20 +10,22 @@ public class PrimitiveDataTypes {
 		int integerValueNegative= -21474836;//10 digits
 		
 		char characterData = 'a';//camel casing
+
+//		char test = '';
 				
-		boolean booleanValue = true;
+		boolean booleanValue = false;
 		
 		short value = 32767;
 		short negativeValue = -327;
 		
 		long longValue = 100999;//19 digits
 		
-		double doubleValue = 0;
+		double doubleValue;
 		
 		float floatValue = 45.98f;
 		doubleValue = 45.86088888;
 		
-		System.out.println("Double value is "+doubleValue);
+		System.out.println("Double value is"+longValue);
 		System.out.println(floatValue);
 		
 	

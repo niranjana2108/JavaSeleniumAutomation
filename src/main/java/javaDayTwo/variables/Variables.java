@@ -4,15 +4,16 @@ public class Variables {
 	//instance variable 
 	int dataOne = 10;
 
+	//static variable
+	static int dataThree=90;
+
 	public void displayData() {
 		dataOne = 18;
 		int a = 5;
 	System.out.println(dataOne);
 	System.out.println(a);
 	}
-	
-	//static variable 
-	static int dataThree=90;
+
 	
 	public void displayData2() {
 	int newVariable = 6;
