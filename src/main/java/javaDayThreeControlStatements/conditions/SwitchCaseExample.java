@@ -3,7 +3,7 @@ package javaDayThreeControlStatements.conditions;
 public class SwitchCaseExample {
 
 	   public static void main(String args[]){
-	      char ch='f';
+	      char ch='b';
 	       switch(ch)
 	      {
 		 case 'a':
@@ -11,7 +11,7 @@ public class SwitchCaseExample {
 		   break;
 		 case 'b':
 		   System.out.println("Case2 ");
-		   break;
+			break;
 		 case 'x':
 		   System.out.println("Case3 ");
 		   break;

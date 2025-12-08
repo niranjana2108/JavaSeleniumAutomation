@@ -9,7 +9,7 @@ public class BreakWhileExample {
 		      while(num<=10)
 		      {
 		          System.out.println("Value of variable is: "+num);
-		          if (num==7)
+		          if (num==2)
 		          {
 		        	  break;
 		          }

@@ -3,7 +3,7 @@ package javaDayThreeControlStatements.conditions;
 public class IfStatementExample {
 
 	   public static void main(String args[]){
-	      int num=80;
+	      int num=180;
 	      if( num < 100 ){
 		  /* This println statement will only execute,
 		   * if the above condition is true

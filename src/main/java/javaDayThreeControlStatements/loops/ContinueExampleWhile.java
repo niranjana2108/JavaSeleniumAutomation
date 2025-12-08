@@ -6,14 +6,12 @@ public class ContinueExampleWhile {
 		int counter=0;
 		while (counter<=10)
 		{
-			
 	           if (counter==7)
 	           {
-	        	counter++;  
+	        	counter++;
 		       continue;
-		       
 	           }
-	           System.out.print(counter+"\n");
+	           System.out.print(counter+"\t");
 	           counter++;
 		}
 		System.out.println("Out of while");
