@@ -20,6 +20,7 @@ public class WithReturnTypeWithoutParameter {
 			System.out.println(object.displaySum());
 			
 			System.out.println("Sum is "+sumValue);
+			sumValue+=15;
 		}
 
 }
