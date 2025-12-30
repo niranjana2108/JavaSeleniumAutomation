@@ -12,16 +12,16 @@ public class Manager extends Employee{
 	 }
 	 
 //	 public void callingParentConstructor() {
-//		 super();
+//		 super(2);
 //	// can not call super constructor in a method
-//		
+//
 //	 }
 	 
 	 
 	 public void printManager(){
 		 
 			System.out.println(" I am from printManager");
-			System.out.println("Manager Salary "+super.salary);
+			System.out.println("Manager Salary "+salary);
 			
 		}
 	 
@@ -29,6 +29,7 @@ public class Manager extends Employee{
 		 
 			System.out.println(" I am from printManager");
 			System.out.println("Manager Salary "+super.salary);
+		 	printManager();
 			super.printManager();
 		}
 	 
@@ -37,10 +38,10 @@ public class Manager extends Employee{
 	 public static void main(String args[]){  
 		 
 		 Manager m=new Manager();  
-	 // System.out.println("Manager Salary "+super.salary);
+//	  System.out.println("Manager Salary "+super.salary);
 	   System.out.println("Manager salary is:"+m.salary);  
 	   System.out.println("Bonus of Manager is:"+m.bonus);  
-//	   m.printEmployee();
+	   m.printEmployee();
 	   m.printManager2();
 	   
 	} 

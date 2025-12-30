@@ -4,7 +4,7 @@ public class FinalKeyword {
 	
 	final int ACCOUNT_NUMBER_DEFAULT_VALUE;
 	
-	final int a = 10;
+	final int a=5;
 	
 	public static final int MAX_VALUE = 10;
 	
