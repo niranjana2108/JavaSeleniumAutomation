@@ -5,7 +5,16 @@ public class DataBean {
 	private int operandOne;
 	private int operandTwo;
 	private static int counter;
-	
+	private String data;
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
 	public int getOperandOne() {
 		return operandOne;
 	}

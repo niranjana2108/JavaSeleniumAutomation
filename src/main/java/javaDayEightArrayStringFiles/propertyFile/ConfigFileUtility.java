@@ -10,22 +10,20 @@ public class ConfigFileUtility {
 	public Properties prop;
 	public FileInputStream fileInput;
 	
-	public ConfigFileUtility()  {
-		
-		try {
-			fileInput = new FileInputStream("D:\\Niranjana_Class\\AutomationJavaSelenium\\workingSample\\JavaDayEightArrayStringFiles\\ExternalFiles\\config.properties");
-			prop = new Properties();
-			
-			prop.load(fileInput);
+	public ConfigFileUtility() {
 
-		
-		}  catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println(e);
-			//e.printStackTrace();
+		try {
+//			fileInput = new FileInputStream("D:\\Niranjana_Class\\IntelliJSamples\\JavaSeleniumAutomation\\src\\test\\res\\ExternalFiles\\config.properties");
+			fileInput = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\res\\ExternalFiles\\config.properties");
+			prop = new Properties();
+			prop.load(fileInput);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		
-				
+
+
 	}
 
 

@@ -51,7 +51,7 @@ public class StringMethods {
 		   //replace()
 		   String s10="Java is a programming language. Java is a platform. Java is an Island.";    
 		   String replaceString=s10.replace("Java","Lava");//replaces all occurrences of "Java" to "Lava"    
-		   System.out.println(replaceString);   
+		   System.out.println(replaceString);
 		  
 		   
 		   

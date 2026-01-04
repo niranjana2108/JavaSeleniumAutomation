@@ -11,10 +11,8 @@ public class MultiDimensionalArray {
 		ar[0][0] = 7;
 		ar[1][0]=9;
 		//printing 2D array  
-		for(int i=0;i<3;i++){ 
-			
-		 for(int j=0;j<3;j++){  
-			 
+		for(int i=0;i<3;i++){
+		 for(int j=0;j<3;j++){
 		   System.out.print(arr[i][j]+" ");  
 		 }  
 		 System.out.println();  
