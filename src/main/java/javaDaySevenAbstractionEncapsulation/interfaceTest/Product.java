@@ -9,6 +9,11 @@ public class Product implements Calculate,TestOne {
 	}
 
 	@Override
+	public void getTestData() {
+
+	}
+
+	@Override
 	public int printData() {
 		return 0;
 	}

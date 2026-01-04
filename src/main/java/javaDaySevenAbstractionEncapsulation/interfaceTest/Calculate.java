@@ -2,6 +2,8 @@ package javaDaySevenAbstractionEncapsulation.interfaceTest;
 
 public interface Calculate {
 	
-	void calculateValue();
+	public void calculateValue();
+
+	public void getTestData();
 
 }

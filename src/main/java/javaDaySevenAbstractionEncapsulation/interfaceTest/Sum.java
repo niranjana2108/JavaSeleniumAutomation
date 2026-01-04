@@ -7,4 +7,9 @@ public class Sum implements Calculate {
 	public void calculateValue() {
 
 	}
+
+	@Override
+	public void getTestData() {
+
+	}
 }
