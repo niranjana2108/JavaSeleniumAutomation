@@ -25,7 +25,8 @@ public static void main(String[] args) throws InterruptedException {
     
     for(int i =0;i<30;i++) {
     	Thread.sleep(2000);
-    	System.out.println("MyTestResult "+dtf.format(now));
+        LocalDateTime now1 = LocalDateTime.now();
+        System.out.println("MyTestResult "+dtf.format(now1));
     }
 }  
 }  

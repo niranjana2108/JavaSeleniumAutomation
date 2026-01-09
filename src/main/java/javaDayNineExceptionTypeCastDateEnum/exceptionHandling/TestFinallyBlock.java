@@ -2,9 +2,9 @@ package javaDayNineExceptionTypeCastDateEnum.exceptionHandling;
 
 class TestFinallyBlock{  
 	  public static void main(String args[]) throws Exception{  
-		  TestThrowExample.validate(9);
+//		  TestThrowExample.validate(9);
 	  try{ 
-	   int  data=25/0;//25/0  
+	   int  data=25/5;//25/0
 	   
 	   System.out.println(data);  
 	  }  

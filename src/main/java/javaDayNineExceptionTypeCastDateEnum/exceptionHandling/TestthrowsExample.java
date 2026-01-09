@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class TestthrowsExample {
 	
-	 void m()throws IOException{  
+	 void m() throws IOException {
 		    throw new IOException("device error");//checked exception  
 		  }  
 	 

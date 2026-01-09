@@ -6,7 +6,7 @@ public class TypeCastExample {
 		
 		double number = 23.567;
 		
-		long longConvert =  (long) number;
+		long longConvert = (long) number;
 		
 		int intConvert = (int) number;
 		
