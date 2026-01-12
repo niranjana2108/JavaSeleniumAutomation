@@ -7,6 +7,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class NewTest {
+
+    @Test
+    public void newMethod(){
+        System.out.println("hi");
+    }
+
+
   @Test
   public void f() {
 	  System.out.println("in F");
@@ -16,15 +23,16 @@ public class NewTest {
   public void f1() {
 	  System.out.println("in F1");
   }
+
   @BeforeMethod
   public void beforeMethod() {
 	  System.out.println("in before method");
   }
 
-//  @AfterMethod
-//  public void afterMethod() {
-//	  System.out.println("in after method");
-//  }
+  @AfterMethod
+  public void afterMethod() {
+	  System.out.println("in after method");
+  }
 
   @BeforeClass
   public void beforeClass() {
