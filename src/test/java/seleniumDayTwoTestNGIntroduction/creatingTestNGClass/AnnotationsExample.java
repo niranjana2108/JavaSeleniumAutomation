@@ -33,6 +33,7 @@ public class AnnotationsExample {
 
   @BeforeTest
   public void beforeTest() {
+    System.out.println("In Before Test");
   }
 
   @AfterTest
@@ -41,6 +42,7 @@ public class AnnotationsExample {
 
   @BeforeSuite
   public void beforeSuite() {
+    System.out.println("In Before suite");
   }
 
   @AfterSuite
