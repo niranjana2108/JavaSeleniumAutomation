@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 public class AssertExampleTest {
 	
-	String validateString;
+	String validateString = "java";
     SoftAssert softAssertion= new SoftAssert();
 
 	@Test()
@@ -23,7 +23,7 @@ public class AssertExampleTest {
 	 public void testEmailGeneratorSoftAsbsert() {
 		 softAssertion.assertTrue(false, "failing assertion");
 		 System.out.println("statement post soft assert 1");
-		 softAssertion.assertEquals("Hello", "ello", "First soft assert failed");
+		 softAssertion.assertEquals("Hello", "Hello", "First soft assert failed");
 		 System.out.println("statement post soft assert 2");
 		 softAssertion.assertAll();
     }

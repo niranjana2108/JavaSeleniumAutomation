@@ -9,25 +9,25 @@
       <class name="seleniumDayThreeTestNG.dependsOn.DependsOnTest"/>
       
       
-   <!--     <class name="seleniumDayThreeTestNG.assertExample.AssertExampleTest"/>
+       <class name="seleniumDayThreeTestNG.assertExample.AssertExampleTest"/>
    
   	  <class name="seleniumDayThreeTestNG.expectedException.TimeoutTest"/>
-      <class name="seleniumDayThreeTestNG.expectedException.ExpectedExceptionTest"/> -->
+      <class name="seleniumDayThreeTestNG.expectedException.ExpectedExceptionTest"/>
     </classes>
   </test> <!-- Test -->
 
- <!--    
+<!--
   <test name="GroupExample">  
 <groups>  
-<run>  
-<include name="database"/> 
-<include name="selenium-test"/>  
+<run>
+    <include name="database"/>
+    <include name="selenium-test"/>
 </run>  
 </groups>  
  <classes>  
  <class name="seleniumDayThreeTestNG.groups.TestGroup"/>
  <class name="seleniumDayThreeTestNG.groups.TestSelenium"/>
   </classes>  
-  </test>   
-  -->
+  </test>   -->
+
 </suite> <!-- Suite -->

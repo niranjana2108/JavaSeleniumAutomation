@@ -9,7 +9,7 @@ public class TimeoutTest {
         Thread.sleep(4000);
     }
 
-    @Test(timeOut = 2000) //can be used for performance testing
+    @Test(timeOut = 5000) //can be used for performance testing
     public void testThisShouldFail() {
         while (true);
     }

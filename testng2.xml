@@ -15,9 +15,11 @@
     -->
     <test name="TestOne">
     <classes>
+        <class name="seleniumDayThreeTestNG.reporting.DataProviderReportingExample"></class>
       <class name="seleniumDayThreeTestNG.parameterExample.ParameterExample">
+
       <methods>
-       <include name="testOne" />
+       <exclude name="testOne" />
       </methods>
      </class>
     </classes>

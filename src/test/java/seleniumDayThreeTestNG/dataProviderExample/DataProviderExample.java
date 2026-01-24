@@ -1,11 +1,13 @@
 package seleniumDayThreeTestNG.dataProviderExample;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderExample {
   @Test(dataProvider = "dp")
-  public void f(Integer n, String s) {
+  public void func(Integer n, String s) {
+    Assert.assertEquals(1,n);
 	  System.out.println(n+" "+s);
   }
 

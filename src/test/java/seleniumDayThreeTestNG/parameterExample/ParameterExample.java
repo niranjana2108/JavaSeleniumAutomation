@@ -15,7 +15,6 @@ public class ParameterExample {
   }
   @Test
   @Parameters({"selenium.host","selenium.port"})
-  
   public void testTwo(String dataOne,String dataTwo) {
 		System.out.println(dataOne+ " "+ dataTwo);
   }
