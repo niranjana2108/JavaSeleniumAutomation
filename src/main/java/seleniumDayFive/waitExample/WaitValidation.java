@@ -35,13 +35,8 @@ public class WaitValidation extends BaseDriver {
 		driver.findElement(By.id("button01")).click();
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		driver.findElement(By.id("button02")).click();
 		driver.findElement(By.id("button03")).click();
-
-
-
-
 	}
 
 }

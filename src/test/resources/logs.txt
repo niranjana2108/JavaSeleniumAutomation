@@ -1,0 +1,6 @@
+08:07:27,026  INFO SeleniumFunctions:15 – test
+08:07:27,027 DEBUG SeleniumFunctions:13 – open url
+08:07:28,995 DEBUG SeleniumFunctions:18 – click function entered
+08:07:29,185 DEBUG SeleniumFunctions:23 – send text data
+08:07:30,134 DEBUG SeleniumFunctions:13 – open url
+08:07:33,930 DEBUG SeleniumFunctions:23 – send text data
