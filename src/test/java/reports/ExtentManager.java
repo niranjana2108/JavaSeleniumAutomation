@@ -11,9 +11,9 @@ public class ExtentManager {
 
         if (extent == null) {
 
-            ExtentSparkReporter reporter =
-                    new ExtentSparkReporter("reports/extentReport.html");
+            String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
 
+            ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
             reporter.config().setReportName("Automation Report");
 
             extent = new ExtentReports();

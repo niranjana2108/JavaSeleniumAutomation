@@ -26,5 +26,18 @@ pipeline {
                 archiveArtifacts artifacts: 'reports/extentReport.html', fingerprint: true
             }
         }
+
+        stage('Publish Report') {
+            steps {
+                publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'reports',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Automation Report'
+                ])
+            }
+        }
     }
 }
