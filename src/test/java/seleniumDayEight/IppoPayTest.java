@@ -8,8 +8,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -21,7 +23,6 @@ import seleniumDayEight.seleniumUtility.RegisterPage;
 
 
 public class IppoPayTest {
-	HomePage homePage = new HomePage();
 	RegisterPage registerPage = new RegisterPage();
 	
 
@@ -29,34 +30,37 @@ public class IppoPayTest {
 	
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		logger.info("In Before method");
+		logger.info("In Before class");
 		
 	}
 	
 	@Test
-	 public void validate() throws InterruptedException {
-		 registerPage.openApplication();
-		 registerPage.setFirstNameField();
+	 public void invalidData() throws InterruptedException {
+		logger.info("In invalidData");
+		registerPage.openApplication();
+		Assert.assertEquals(registerPage.login("data","data"),"data");
 		  
 	  }
+
+	@Test
+	public void validData() throws InterruptedException {
+		registerPage.openApplication();
+
+	}
 	
 	 @AfterMethod 
-	 public void takeScreenShotOnFailure(ITestResult testResult) throws IOException { 
-		 if (testResult.getStatus() == ITestResult.FAILURE) { 
+	 public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+		 if (testResult.getStatus() == ITestResult.FAILURE) {
 	 		File scrFile = ((TakesScreenshot)BaseDriver.driver).getScreenshotAs(OutputType.FILE); 
-	 		FileUtils.copyFile(scrFile, new File(System.getProperty("User.dir")+"\\src\\test\\resources\\FailedScreenshots\\" + testResult.getName()+"_"+System.currentTimeMillis() +".jpg"));
+	 		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\FailedScreenshots\\" + testResult.getName()+"_"+System.currentTimeMillis() +".jpg"));
 	 	} 
 		 
-	}	
-	
-	
-	 @Test
-	  public void resolveError() throws InterruptedException {
-		 homePage.openApplication();
-		 homePage.clickSignUpButton();
-		 registerPage.setFirstNameField();
-		  
-	  }
-	
-	
+	}
+
+	@AfterTest
+	public void tearDown() {
+		registerPage.closeApplication();
+		logger.info("Browser closed");
+	}
+
 }

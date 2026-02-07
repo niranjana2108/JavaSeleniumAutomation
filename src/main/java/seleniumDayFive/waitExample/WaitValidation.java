@@ -1,10 +1,15 @@
 package seleniumDayFive.waitExample;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import seleniumDayFour.driverInfo.BaseDriver;
@@ -37,6 +42,19 @@ public class WaitValidation extends BaseDriver {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("button02")).click();
 		driver.findElement(By.id("button03")).click();
+	}
+
+	public void validateFluentWait() {
+		Wait<WebDriver> wait = new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(30))
+				.pollingEvery(Duration.ofSeconds(2))
+				.ignoring(NoSuchElementException.class);
+
+		WebElement frame = wait.until(d ->
+											  d.findElement(By.xpath("//iframe[@title='Payment Details']")));
+
+		driver.switchTo().frame(frame);
+
 	}
 
 }

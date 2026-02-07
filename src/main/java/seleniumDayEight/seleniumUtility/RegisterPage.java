@@ -8,16 +8,25 @@ import seleniumDayFour.driverInfo.BaseDriver;
 
 public class RegisterPage extends SeleniumFunctions {
 	
-	By firstNameTextbox = By.xpath("//label[text()='Full Name']/following-sibling::input");
-	
+	By userNameTextbox = By.xpath("//input[@name='username']");
+	By passwordTextbox = By.xpath("//input[@name='password']");
+	By loginButton = By.xpath("//input[@value='Log In']");
+	By message = By.xpath("//p[@class='error']");
+
 
 	public void openApplication() {
-		openURL("https://app.ippopay.com/signup");
+		openURL("https://parabank.parasoft.com/parabank/index.htm");
 	}
 		
-	public void setFirstNameField() {
-		sendkeysFunction(firstNameTextbox, "testdata");
+	public String login(String userName,String pwd) {
+		sendkeysFunction(userNameTextbox, userName);
+		sendkeysFunction(passwordTextbox, pwd);
+		driver.findElement(loginButton).click();
+		return driver.findElement(message).getText();
 	}
-	
+
+	public void closeApplication() {
+		driver.quit();
+	}
 	
 }
