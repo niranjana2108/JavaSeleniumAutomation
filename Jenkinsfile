@@ -10,7 +10,8 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'YOUR_GITHUB_REPO'
+             git branch: 'main',
+                url: 'https://github.com/niranjana2108/JavaSeleniumAutomation.git'
             }
         }
 
