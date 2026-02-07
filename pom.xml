@@ -93,7 +93,7 @@
                 <configuration>
                     <!-- Pointing to TestNG suite -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng2.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
